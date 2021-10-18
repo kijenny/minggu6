@@ -15,7 +15,7 @@
                     @endif
 
                     <a href="/students/create" class="btn btn-primary">Add Data</a><br><br>
-                    
+
                     <table class="table table-responsive table-striped">
                         <thead>
                             <tr>
@@ -30,6 +30,9 @@
                                 <td>{{ $s->nim }}</td>
                                 <td>{{ $s->name }}</td>
                                 <td>{{ $s->class }}</td>
+                            <td>
+                                <a href="/students/{{$s->id}}/edit" class="btn btnwarning">Edit</a>
+                            </td>
                             </tr>
                             @endforeach
                         </tbody>
