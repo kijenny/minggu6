@@ -5,9 +5,16 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('STUDENT DATA DETAILS') }}</div>
+                <div class="card-header">{{ __('STUDENT DATA DETAILS') }}
 
                 <div class="card-body">
+                Name : {{ $student->name }} <br>
+                    Class : {{ $student->kelas->class_name }} <br>
+                    Department : {{ $student->department }} <br>
+                    Phone Number : {{ $student->phone_number }} <br>
+                    Created at : {{ $student->created_at }} <br>
+                    Updated at : {{ $student->updated_at }} <br>
+                </div>
                     <table class="table table-responsive">
                         <tr><th>Id</th><th>:</th><td>{{ $student->id }}</td></tr>
                         <tr><th>NIM</th><th>:</th><td>{{ $student->nim }}</td></tr>
