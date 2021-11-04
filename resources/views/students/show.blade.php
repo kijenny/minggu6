@@ -8,6 +8,12 @@
                 <div class="card-header">{{ __('STUDENT DATA DETAILS') }}
 
                 <div class="card-body">
+                    @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
+                @endif
+                <img width="150px" src="{{asset('storage/' .$student->photo)}}"><br><br>
                 Name : {{ $student->name }} <br>
                     Class : {{ $student->kelas->class_name }} <br>
                     Department : {{ $student->department }} <br>
