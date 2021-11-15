@@ -61,7 +61,9 @@
                             </li>
 
                             <li class="nav-item">
-                                    <a class="nav-link" href="users">{{ __('CRUD USER') }}</a>
+                            @can('manage-users')
+                                <a class="nav-link" href="/users">User Data</a>
+                            @endcan
                             </li>
 
                             <li class="nav-item dropdown">
